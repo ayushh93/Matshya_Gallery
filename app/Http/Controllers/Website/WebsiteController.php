@@ -70,5 +70,17 @@ class WebsiteController extends Controller
         $faqs = Cache::get('faqs', Faq::latest()->get());
         return view('website.pages.faq.faq',compact('faqs'));
     }
+    // Search
+    public function search(Request $request)
+    {
+        $request->validate([
+            'search' => 'required|max:100'
+        ]);
+
+        $search = $request->search;
+        $results = Product::where('is_active',1)->where('name','LIKE', '%'.$search.'%')->latest()->get();
+        $title = "Search result for keyword ' " . $search . " '";
+        return view('website.pages.search.search', compact('results', 'title'));
+    }
     
 }

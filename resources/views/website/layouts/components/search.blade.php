@@ -1,6 +1,7 @@
 <div class="search-overlay">
-    <form action="">
+    <form action="{{route('search')}}" method="POST">
+        @csrf
         <input type="text" placeholder="Search Anything" name="search" class="search-input-form">
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
 </div>

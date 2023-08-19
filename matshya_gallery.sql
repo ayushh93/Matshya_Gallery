@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 09, 2023 at 12:14 PM
+-- Generation Time: Aug 19, 2023 at 08:18 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -345,7 +345,9 @@ INSERT INTO `activity_log` (`id`, `log_name`, `description`, `subject_type`, `su
 (296, 'default', 'updated', 'Pratiksh\\Adminetic\\Models\\Admin\\Setting', 24, 'App\\Models\\User', 1, '[]', NULL, 'updated', '2023-08-09 04:15:53', '2023-08-09 04:15:53'),
 (297, 'default', 'updated', 'Pratiksh\\Adminetic\\Models\\Admin\\Setting', 25, 'App\\Models\\User', 1, '[]', NULL, 'updated', '2023-08-09 04:15:53', '2023-08-09 04:15:53'),
 (298, 'default', 'updated', 'Pratiksh\\Adminetic\\Models\\Admin\\Setting', 28, 'App\\Models\\User', 1, '[]', NULL, 'updated', '2023-08-09 04:19:15', '2023-08-09 04:19:15'),
-(299, 'default', 'updated', 'Pratiksh\\Adminetic\\Models\\Admin\\Setting', 26, 'App\\Models\\User', 1, '[]', NULL, 'updated', '2023-08-09 04:19:24', '2023-08-09 04:19:24');
+(299, 'default', 'updated', 'Pratiksh\\Adminetic\\Models\\Admin\\Setting', 26, 'App\\Models\\User', 1, '[]', NULL, 'updated', '2023-08-09 04:19:24', '2023-08-09 04:19:24'),
+(300, 'default', 'deleted', 'App\\Models\\User', 2, 'App\\Models\\User', 1, '[]', NULL, 'deleted', '2023-08-13 05:51:52', '2023-08-13 05:51:52'),
+(301, 'default', 'updated', 'App\\Models\\User', 1, 'App\\Models\\User', 1, '[]', NULL, 'updated', '2023-08-17 00:58:17', '2023-08-17 00:58:17');
 
 -- --------------------------------------------------------
 
@@ -942,8 +944,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin User', 'admin@admin.com', NULL, '$2y$10$8ENtxZQmG9TdrgBeR/U1Le9bnkidPBT8pQS0srfSZBPkfjmfJxuiG', 'uFRPmF3X6mbamVVvhwYHdi4YIX1l7PUY6e0Uhb98Fx4Yh3Vw4J2OYUA7RIDw', '2023-07-12 11:56:36', '2023-07-12 11:56:36'),
-(2, 'Matshya Gallery SuperAdmin', 'matshyagallerysuperadmin@gmail.com', NULL, '$2y$10$Db1J1i/92X4YE1ynkSGPZ.LLZA.nzjnKurIK4LPJ1i6l7vjwuRsrK', NULL, '2023-08-05 02:02:08', '2023-08-05 02:02:08');
+(1, 'Admin User', 'admin@admin.com', NULL, '$2y$10$8ENtxZQmG9TdrgBeR/U1Le9bnkidPBT8pQS0srfSZBPkfjmfJxuiG', 'B4CjetYNZGAq5lUNzRCAdBkrWHO178uQU1mkAq4cGjCON1CSQd8d8ehIqmjW', '2023-07-12 11:56:36', '2023-07-12 11:56:36');
 
 --
 -- Indexes for dumped tables
@@ -1107,7 +1108,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `activity_log`
 --
 ALTER TABLE `activity_log`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=300;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=302;
 
 --
 -- AUTO_INCREMENT for table `blogs`

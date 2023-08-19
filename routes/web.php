@@ -31,6 +31,7 @@ Route::resource('admin/testimonial',\App\Http\Controllers\Admin\TestimonialContr
 
 //Website routes
 Route::get('/', [WebsiteController::class,'index'])->name('index');
+Route::post('/search', [WebsiteController::class,'search'])->name('search');
 Route::get('/about-us', [WebsiteController::class,'about'])->name('about');
 Route::get('/gallery', [WebsiteController::class,'gallery'])->name('gallery');
 Route::get('/blogs', [WebsiteController::class,'blogs'])->name('blogs');
